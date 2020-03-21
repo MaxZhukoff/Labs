@@ -20,7 +20,7 @@ public:
     Vector2D operator* (const double) const;
     double operator* (const Vector2D&) const;
     Vector2D operator/ (const double) const;
-    friend ostream& operator << (ostream&, const Vector2D&);
+    friend std::ostream& operator << (std::ostream&, const Vector2D&);
 };
 
 class IPhysObject {

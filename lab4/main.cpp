@@ -25,14 +25,14 @@ private:
 
 void FigureSystem::menu() {
     while (state) {
-        cout << "„®¡ ¢¨âì ä¨£ãàã: '1'" << endl;
-        cout << "ˆ­ä®à¬ æ¨ï ® ¢á¥å ä¨£ãà å: '2'" << endl;
-        cout << "®«ãç¨âì áã¬¬ã ¢á¥å ¯«®é ¤¥©: '3'" << endl;
-        cout << "®«ãç¨âì áã¬¬ã ¢á¥å ¯¥à¨¬¥âà®¢: '4'" << endl;
-        cout << "®«ãç¨âì æ¥­âà ¬ áá: '5'" << endl;
-        cout << "®«ãç¨âì à §¬¥à ¢á¥å ä¨£ãà: '6'" << endl;
-        cout << "‘®àâ¨à®¢ª  ä¨£ãà ¯® ¬ áá¥: '7'" << endl;
-        cout << "‡ ¢¥àè¥­¨¥ à ¡®âë: '8'" << endl;
+        cout << "â€žÂ®Â¡Â Â¢Â¨Ã¢Ã¬ Ã¤Â¨Â£Ã£Ã Ã£: '1'" << endl;
+        cout << "Ë†Â­Ã¤Â®Ã Â¬Â Ã¦Â¨Ã¯ Â® Â¢Ã¡Â¥Ã¥ Ã¤Â¨Â£Ã£Ã Â Ã¥: '2'" << endl;
+        cout << "ÂÂ®Â«Ã£Ã§Â¨Ã¢Ã¬ Ã¡Ã£Â¬Â¬Ã£ Â¢Ã¡Â¥Ã¥ Â¯Â«Â®Ã©Â Â¤Â¥Â©: '3'" << endl;
+        cout << "ÂÂ®Â«Ã£Ã§Â¨Ã¢Ã¬ Ã¡Ã£Â¬Â¬Ã£ Â¢Ã¡Â¥Ã¥ Â¯Â¥Ã Â¨Â¬Â¥Ã¢Ã Â®Â¢: '4'" << endl;
+        cout << "ÂÂ®Â«Ã£Ã§Â¨Ã¢Ã¬ Ã¦Â¥Â­Ã¢Ã  Â¬Â Ã¡Ã¡: '5'" << endl;
+        cout << "ÂÂ®Â«Ã£Ã§Â¨Ã¢Ã¬ Ã Â Â§Â¬Â¥Ã  Â¢Ã¡Â¥Ã¥ Ã¤Â¨Â£Ã£Ã : '6'" << endl;
+        cout << "â€˜Â®Ã Ã¢Â¨Ã Â®Â¢ÂªÂ  Ã¤Â¨Â£Ã£Ã  Â¯Â® Â¬Â Ã¡Ã¡Â¥: '7'" << endl;
+        cout << "â€¡Â Â¢Â¥Ã Ã¨Â¥Â­Â¨Â¥ Ã Â Â¡Â®Ã¢Ã«: '8'" << endl;
         int command;
         cin >> command;
         std::cin.ignore(32767, '\n');
@@ -42,7 +42,7 @@ void FigureSystem::menu() {
 
 void FigureSystem::addFigure() {
     int command;
-    cout << "Š ªãî ä¨£ãàã ¤®¡ ¢ ¨âì?" << endl;
+    cout << "Å Â ÂªÃ£Ã® Ã¤Â¨Â£Ã£Ã Ã£ Â¤Â®Â¡Â Â¢Â Â¨Ã¢Ã¬?" << endl;
     cout << "Section : '1'" << endl;
     cout << "Ellipse : '2'" << endl;
     cin >> command;
@@ -56,7 +56,7 @@ void FigureSystem::addFigure() {
         figures[figures.size() - 1]->initFromDialog();
         break;
     default:
-        cout << "¥¨§¢¥áâ­ ï ª®¬ ­¤ " << endl;
+        cout << "ÂÂ¥Â¨Â§Â¢Â¥Ã¡Ã¢Â­Â Ã¯ ÂªÂ®Â¬Â Â­Â¤Â " << endl;
         std::cin.clear();
         std::cin.ignore(32767, '\n');
     }
@@ -74,7 +74,7 @@ void FigureSystem::totalSquare() {
         result += figure->square();
     }
 
-    cout << "‘ã¬¬  ¯«®é ¤¥© ¢á¥å ä¨£ãà: " << result << endl;
+    cout << "â€˜Ã£Â¬Â¬Â  Â¯Â«Â®Ã©Â Â¤Â¥Â© Â¢Ã¡Â¥Ã¥ Ã¤Â¨Â£Ã£Ã : " << result << endl;
 }
 
 void FigureSystem::totalPerimeter() {
@@ -83,7 +83,7 @@ void FigureSystem::totalPerimeter() {
         result += figure->perimeter();
     }
 
-    cout << "‘ã¬¬  ¯¥à¨¬¥âà®¢ ¢á¥å ä¨£ãà: " << result << endl;
+    cout << "â€˜Ã£Â¬Â¬Â  Â¯Â¥Ã Â¨Â¬Â¥Ã¢Ã Â®Â¢ Â¢Ã¡Â¥Ã¥ Ã¤Â¨Â£Ã£Ã : " << result << endl;
 }
 
 void FigureSystem::centerOfMass() {
@@ -102,7 +102,7 @@ void FigureSystem::centerOfMass() {
             result = result / massSum;
         }
     }
-    cout << "–¥­âà ¬ áá á¨áâ¥¬ë: " << result << endl;
+    cout << "â€“Â¥Â­Ã¢Ã  Â¬Â Ã¡Ã¡ Ã¡Â¨Ã¡Ã¢Â¥Â¬Ã«: " << result << endl;
 }
 
 void FigureSystem::totalSize() {
@@ -110,7 +110,7 @@ void FigureSystem::totalSize() {
     for (auto figure : figures) {
         result += figure->size();
     }
-    cout << "Ž¡é¨© à §¬¥à ¢á¥å ä¨£ãà: " << result << endl;
+    cout << "Å½Â¡Ã©Â¨Â© Ã Â Â§Â¬Â¥Ã  Â¢Ã¡Â¥Ã¥ Ã¤Â¨Â£Ã£Ã : " << result << endl;
 }
 
 void FigureSystem::sortFigures() {
@@ -143,7 +143,7 @@ void FigureSystem::controller(int command) {
     case 8:
         exit(0);
     default:
-        cout << "¥¨§¢¥áâ­ ï ª®¬ ­¤ " << endl;
+        cout << "ÂÂ¥Â¨Â§Â¢Â¥Ã¡Ã¢Â­Â Ã¯ ÂªÂ®Â¬Â Â­Â¤Â " << endl;
         std::cin.clear();
         std::cin.ignore(32767, '\n');
     }
